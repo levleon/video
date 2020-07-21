@@ -23,6 +23,19 @@
 		    align-items: center;
 		    justify-content: center;
 		}
+		.warning{
+			padding: 35px;
+			flex-direction: column;
+			text-align: center;
+		}
+		.align_center{
+			display: flex;
+			align-items: center;
+		}
+		.free_a{
+			color: #32b846;
+			text-decoration: none;
+		}
       	</style>
 </head>
 <body>
@@ -41,7 +54,29 @@
 		    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 		}
 		const matchId = getParameterByName('m');
-		var player = new Playerjs({id:"player4", file:`https://kotak.ga/${ matchId }/index.m3u8`});
+		function adBlockNotDetected() {
+			var player = new Playerjs({id:"player4", file:`https://kotak.ga/${ matchId }/index.m3u8`});
+		}
+		function adBlockDetected() {
+			document.getElementById('player_b').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/free_logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
+		}
+
+		if(typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
+			adBlockDetected();
+		} else {
+			var importFAB = document.createElement('script');
+			importFAB.onload = function() {
+				fuckAdBlock.onDetected(adBlockDetected)
+				fuckAdBlock.onNotDetected(adBlockNotDetected);
+			};
+			importFAB.onerror = function() {
+				adBlockDetected(); 
+			};
+			importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
+			importFAB.crossOrigin = 'anonymous';
+			importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
+			document.head.appendChild(importFAB);
+		}
 	    </script>
 </body>
 </html>
