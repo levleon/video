@@ -66,9 +66,7 @@
 	<noscript><div><img src="https://mc.yandex.ru/watch/65783230" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
 <body>
-	    <div id="player_b">
-		<div id="player4"></div>
-	    </div>
+	    <div id="player4"></div>
 	    <script src="./player.js"></script>
 	    <script>
 	    	function getParameterByName(name, url) {
@@ -85,7 +83,7 @@
 			var player = new Playerjs({id:"player4", file:`https://kotak.ga/${ matchId }/index.m3u8`, ratio:"16/9"});
 		}
 		function adBlockDetected() {
-			document.getElementById('player_b').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/adblock-logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
+			document.getElementById('player4').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/adblock-logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
 		}
 
 		if(typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
