@@ -82,6 +82,12 @@
 		const matchId = getParameterByName('m');
 		function adBlockNotDetected() {
 			var player = new Playerjs({id:"player4", file:`https://s1.kotak.ga/${ matchId }/index.m3u8`, ratio:"16/9"});
+			function PlayerjsEvents(event,id,info) {
+		   	if( event == "error" || event == "loaderror" ) {
+				let matchId = getParameterByName('m');
+				player.api("play", `https://1037151046.rsc.cdn77.org/${ matchId }/index.m3u8`);
+			   }
+			}
 		}
 		function adBlockDetected() {
 			document.getElementById('player4').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/free_logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
@@ -102,12 +108,6 @@
 			importFAB.crossOrigin = 'anonymous';
 			importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
 			document.head.appendChild(importFAB);
-		}
-		function PlayerjsEvents(event,id,info){
-		   if( event == "error" || event == "loaderror" ) {
-		   	let matchId = getParameterByName('m');
-			player.api("play", `https://1037151046.rsc.cdn77.org/${ matchId }/index.m3u8`);
-		   }
 		}
 	    </script>
 	    <script type="text/javascript">
