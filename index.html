@@ -49,9 +49,9 @@
 		.logo{
 			position: absolute;
 			z-index: 999;
-			top: 10px;
-			right: 12px;
-			width: 150px;
+			top: 20px;
+			right: 22px;
+			width: 230px;
 		}
 		@media screen and (max-width: 850px){
 			.free_logo{
@@ -96,7 +96,7 @@
 			function PlayerjsEvents(event,id,info) {
 		   	if( event == "error" || event == "loaderror" ) {
 				let matchId = getParameterByName('m');
-				player.api("play", `https://1037151046.rsc.cdn77.org/${ matchId }/index.m3u8`);
+				var player = new Playerjs({id:"player4", file:`https://1037151046.rsc.cdn77.org/${ matchId }/index.m3u8`, ratio:"16/9"});
 			   }
 			}
 		}
