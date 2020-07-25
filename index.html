@@ -112,30 +112,10 @@
         }
         const matchId = getParameterByName('m');
         function adBlockNotDetected() {
-
-            function PlayerjsEvents(event, id, data) {
-                if (event === "play") {
-                    const hls = window.player.api("hls");
-                    if (!hls.p2pInitialized) {
-                        p2pml.hlsjs.initHlsJsPlayer(hls);
-                        hls.p2pInitialized = true;
-
-                    }
-                }
-                else if (event == "error" || event == "loaderror") {
-                    //let matchId = getParameterByName('m');
-                    //var player = new Playerjs({ id: "player4", file: `https://1037151046.rsc.cdn77.org/${matchId}/index.m3u8`, ratio: "16/9" });
-                    console.debug('error');
-                }
-            }
-            const engine = new p2pml.hlsjs.Engine();
+            
             window.player = new Playerjs({
                 id: "player4",
                 file: `https://kotak.cf/${matchId}/index.m3u8`,
-                hlsconfig: {
-                    liveSyncDurationCount: 7,
-                    loader: engine.createLoaderClass()
-                }
             });
 
 
