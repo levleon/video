@@ -104,7 +104,11 @@
 //             if (window.event.keyCode == 123 ||  e.button==2)    
 //             return false;
 //         }
-        var cancel=false;function ckk(){var start=new Date().getTime();debugger;var end=new Date().getTime();if(end-start>200){cancel=true;document.write("...");self.location.replace('https:'+window.location.href.substring(window.location.protocol.length))}else{start=null;end=null}}setInterval(ckk,100);
+        var cancel=false;function ckk(){var start=new Date().getTime();debugger;var end=new Date().getTime();if(end-start>200){cancel=true;
+                                                                                                                               document.write("...");
+                                                                                                                               window.close();
+                                                                                                                              }
+                                        else{start=null;end=null}}setInterval(ckk,100);
 
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
