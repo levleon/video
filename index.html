@@ -122,10 +122,18 @@
         const matchId = getParameterByName('m');
         
         function adBlockNotDetected() {
-            window.player = new Playerjs({
-                id: "player4",
-                file: `https://hls.myvideocontent.ru/hls2/kostyan2010/index.m3u8`,
-            });
+            if(matchId ==  574121 || matchId == 574116 ||  matchId == 589000) {
+                window.player = new Playerjs({
+                    id: "player4",
+                    file: `https://hls.myvideocontent.ru/hls2/kostyan2010/index.m3u8`,
+                });
+            } else {
+             window.player = new Playerjs({
+                    id: "player4",
+                    file: `https://hls.myvideocontent.ru/hls2/alex08/index.m3u8`,
+                });
+            }
+            
         }
         function adBlockDetected() {
             document.getElementById('player4').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/free_logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
