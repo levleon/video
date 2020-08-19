@@ -122,10 +122,18 @@
         const matchId = getParameterByName('m');
         
         function adBlockNotDetected() {
+            if(matchId ==  574117 || matchId == 574116 ||  matchId == 589000) {
                 window.player = new Playerjs({
                     id: "player4",
-                    file: `https://ex.koktem.ml/${ matchId }/index.m3u8`,
+                    file: `https://hls.myvideocontent.ru/hls2/kostyan2010/index.m3u8`,
                 });
+            }
+            else {
+                window.player = new Playerjs({
+                    id: "player4",
+                    file: `https://hls.myvideocontent.ru/hls2/lexa50/index.m3u8`,
+                });
+            }
 
             
         }
