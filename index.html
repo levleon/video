@@ -122,10 +122,16 @@
         const matchId = getParameterByName('m');
         
         function adBlockNotDetected() {
-            if(matchId ==  591151 || matchId == 574130 ||  matchId == 574125 ||  matchId == 574127) {
+            if(matchId ==  571489 || matchId == 574130 ||  matchId == 574125 ||  matchId == 574127) {
                 window.player = new Playerjs({
                     id: "player4",
                     file: `https://hls.myvideocontent.ru/hls2/alex08/index.m3u8`,
+                });
+            }
+            else if(matchId ==  574141) {
+                window.player = new Playerjs({
+                    id: "player4",
+                    file: `https://hls.myvideocontent.ru/hls2/tolyan12/index.m3u8`,
                 });
             }
             else {
