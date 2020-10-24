@@ -94,85 +94,14 @@
 </head>
 
 <body>
-    <div id="player4" style="width:100%;height:100%"></div>
-    <script src="./player.js"></script>
-    <script>
-//         window.oncontextmenu = function () {
-//             return false;
-//         }
-//         document.onkeydown = function (e) { 
-//             if (window.event.keyCode == 123 ||  e.button==2)    
-//             return false;
-//         }
-        var cancel=false;function ckk(){var start=new Date().getTime();debugger;var end=new Date().getTime();if(end-start>200){cancel=true;
-                                                                                                                               document.write("...");
-                                                                                                                               window.close();
-                                                                                                                              }
-                                        else{start=null;end=null}}setInterval(ckk,100);
-
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-        const matchId = getParameterByName('m');
-        
-        function adBlockNotDetected() {
-            if(matchId ==  605107 || matchId == 332434 ||  matchId == 574143 ||  matchId == 574127) {
-                window.player = new Playerjs({
-                    id: "player4",
-                    file: `https://hls.myvideocontent.ru/hls2/toxa7/index.m3u8`,
-                });
-            }
-            else if(matchId ==  592172) {
-                window.player = new Playerjs({
-                    id: "player4",
-                    file: `https://hls.myvideocontent.ru/hls2/tolyan12/index.m3u8`,
-                });
-            }
-            else {
-                window.player = new Playerjs({
-                    id: "player4",
-                    file: `https://hls.myvideocontent.ru/hls2/kandratiev1/index.m3u8`,
-                });
-            }
-
-            
-        }
-        function adBlockDetected() {
-            document.getElementById('player4').innerHTML = '<div class="warning align_center"><img class="free_logo" src="//cdnliveball7.b-cdn.net/public/img/free_logo.png"><h2>Дорогой зритель!</h2> <span>У тебя включен AdBlock (блокируется реклама) и из-за этого здесь нет трансляции. Пожалуйста, <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">выключи его</a> и тогда ты сможешь смотреть матч. Наш сайт показывает для тебя трансляции бесплатно. <a class="free_a" href="https://geekon.media/otklyuchaem-adblock-v-brauzerax/">Отключив AdBlock</a>, ты поможешь развитию сайта LiveBall!</span></div>';
-        }
-
-        if (typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined') {
-            adBlockDetected();
-        } else {
-            var importFAB = document.createElement('script');
-            importFAB.onload = function () {
-                fuckAdBlock.onDetected(adBlockDetected)
-                fuckAdBlock.onNotDetected(adBlockNotDetected);
-            };
-            importFAB.onerror = function () {
-                adBlockDetected();
-            };
-            importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
-            importFAB.crossOrigin = 'anonymous';
-            importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
-            document.head.appendChild(importFAB);
-        }
-    </script>
-    <script type="text/javascript">
-        var utarget_rand = Math.floor(Math.random() * 10000);
-        var utarget_cookie = document.cookie.indexOf("u_880ba08f0d=") + 1;
-        var utarget_script = document.createElement("script");
-        utarget_script.type = 'text/javascript';
-        utarget_script.async = true;
-        utarget_script.src = "https://utarget.ru/ranging/880ba08f0d/js/?rand=" + utarget_rand + "&cookie=" + utarget_cookie;
-        document.body.appendChild(utarget_script);
-    </script>
+    <div id="player4" style="width:100%;height:100%">
+        <h1>Liveball.ru</h1>
+        <p>Ищите актуальное зеркало сайта для просмотра футбола и UFC liveball? Тут всегда актуальная ссылка на сайт для просмотра Ваших любимых трансляций в отличном качестве</p>
+        <p>UFC 254: Нурмагомедов vs Гэйтжи - прямые трансляции боев на LiveBall</p>
+        <h3><a href="http://w1.liveball8.ml/">LiveBall перейти к просмотру</a></h3>
+        <h3><a href="http://w1.liveball8.ml/ufc-new">Смотреть UFC 254: Нурмагомедов vs Гэйтжи бесплатно</a></h3>
+    </div>
+    
 </body>
 
 </html>
