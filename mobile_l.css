@@ -1,0 +1,69 @@
+.head_block{
+	padding: 0 15px;
+	box-sizing: border-box
+}
+.league_block{
+	width: 290px;
+    height: 135px;
+}
+.main_div{
+	padding: 10px 15px;
+}
+.league_img{
+	height: 70px;
+}
+.main_page{
+	padding: 0;
+}
+#dlg-wrap {
+    width: 100vw;
+    max-height: 100vh;
+}
+.t_time{
+	font-size: 12px;
+}
+.top_match{
+	justify-content: space-around;
+}
+.down{
+	padding: 0;
+}
+.pr_vs{
+	padding: 0 110px; 
+}
+.date_match{
+	font-size: 14px;
+	padding: 0 10px 9px 10px;
+}
+.vs{
+	font-size: 17px;
+}
+.left_team{
+	padding-right: 10px;
+}
+.right_team{
+	padding-left: 10px;
+}
+.down_head li{
+	padding: 7px 30px; 
+}
+.team_title{
+	font-size: 17px;
+}
+.time{
+	font-size: 17px;
+	width: 12%;
+}
+.index_lcol{
+	width: 65%;
+}
+.index_champ{
+	width: 35%;
+}
+.left{
+	display: none;
+}
+h3{
+	margin: 10px 0;
+    font-size: 16px;
+}
