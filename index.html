@@ -2,116 +2,294 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <title>Liveball.ru</title>
-    <style>
-        html,
-        body,
-        #player4 {
-            width: 100%;
-            height: 100% !important;
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            position: relative;
-            background: ##323232;
-            text-align: center !important;
-        }
-
-        #player4 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-        }
-
-        .warning {
-            padding: 35px;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .align_center {
-            display: flex;
-            align-items: center;
-        }
-
-        .free_a {
-            color: #32b846;
-            text-decoration: none;
-        }
-
-        html {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-weight: 400;
-            color: #000323;
-            height: 100%;
-        }
-
-        .logo {
-            position: absolute;
-            z-index: 999;
-            top: 10px;
-            right: 12px;
-            width: 15%;
-        }
-
-        @media screen and (max-width: 850px) {
-            .free_logo {
-                width: 190px;
-            }
-
-            .warning {
-                font-size: 11px;
-            }
-        }
-    </style>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(65783230, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/65783230" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Смотреть футбол онлайн бесплатно и в хорошем качестве. Спортивные онлайн трансляции, матчи АПЛ, Премьер Лиги, Лиги Чемпионов, Лиги Европы, РПЛ, испанской Примеры, Серии А, Лиги 1. Футбол в высоком качестве и онлайн результаты на LiveBall.ru">
+	<title>LiveBall - Мы там, где футбол</title>
+	<link rel="shortcut icon" href="//liveball.ru/public/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="//liveball.ru/public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="//liveball.ru/public/css/normalize.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 850px)" href="//liveball.ru/public/css/mobile.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1170px) and (min-width: 850px)"
+		href="//liveball.ru/public/css/mobile_l.css">
 </head>
 
 <body>
-    <header class="align_center">
-       <div class="head_block container">
-          <div class="without_menu align_center">
-             <div id="logo_id"><a href="http://liveball.ru"><img src="/new_logo.png" alt="Logo" class="logo"></a></div>
-             <div class="right_header_block align_center">
-                <div class="theme-button align_center" id="theme-button" style="background-color: rgb(68, 67, 67);"><svg height="27" viewBox="-80 0 512 512.15457" width="27" xmlns="http://www.w3.org/2000/svg"><path d="m272.070312 384.15625h-192v-16c-.304687-25.832031-10.839843-50.484375-29.292968-68.5625-68.171875-69.109375-67.511719-180.363281 1.46875-248.664062 68.984375-68.296876 180.238281-67.847657 248.667968 1.003906 68.425782 68.855468 68.1875 180.113281-.539062 248.667968-18.101562 17.816407-28.296875 42.152344-28.304688 67.554688zm0 0" fill="#ffcb5a" id="light_on"></path><path d="m96.070312 416.15625h160c8.839844 0 16 7.160156 16 16 0 8.835938-7.160156 16-16 16h-160c-8.835937 0-16-7.164062-16-16 0-8.839844 7.164063-16 16-16zm0 0" fill="#62808c"></path><path d="m128.070312 480.15625h96c8.839844 0 16 7.160156 16 16 0 8.835938-7.160156 16-16 16h-96c-8.835937 0-16-7.164062-16-16 0-8.839844 7.164063-16 16-16zm0 0" fill="#62808c"></path><g fill="#fff"><path d="m64.070312 160.15625h32v32h-32zm0 0"></path><path d="m128.070312 192.15625h32v192h32v-192h32v-32h-96zm0 0"></path><path d="m256.070312 160.15625h32v32h-32zm0 0"></path></g></svg></div>
-             </div>
-          </div>
-       </div>
-    </header>
-    
-    <div style="width:100%;height:100%">
-        <h1><img height="50" src="/new_logo.png">LiveBall</h1>
-        <p>Ищите актуальное зеркало сайта для просмотра футбола и UFC liveball? Тут всегда актуальная ссылка на сайт для просмотра Ваших любимых трансляций в отличном качестве</p>
-        <h3><a href="http://w1.liveball8.ml/">LiveBall перейти к просмотру</a></h3>
-    </div>
-    
+	<header class="align_center">
+		<div class="head_block container">
+			<div class="without_menu align_center">
+				<div id="logo_id"><a href="/"><img src="//liveball.ru/public/img/new_logo.png" alt="Logo" class="logo"></a></div>
+			</div>
+		</div>
+
+	</header>
+	<main class="main_div">
+		<div class="container">
+
+			<section class="league_section">
+				<h1 class="align_center"><img src="#" alt="Мяч" class="title_img">Топ матчи дня</h1>
+				<div class="top_match">
+					<div class="league_block">
+						<a href="#" class="la align_center">
+							<div class="t_match">
+								<div class="t_left">
+									<div><img src="#" alt="Барселона" class="league_img"></div>
+									<span class="league_title">Барселона</span>
+								</div>
+								<div class="t_center">
+									<span class="t_vs">21:00</span>
+									<span class="t_time">22 марта</span>
+								</div>
+								<div class="t_right">
+									<div><img src="#" alt="Реал Мадрид" class="league_img"></div>
+									<span class="league_title">Реал Мадрид</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="league_block">
+						<a href="#" class="la align_center">
+							<div class="t_match">
+								<div class="t_left">
+									<div><img src="#" alt="Барселона" class="league_img"></div>
+									<span class="league_title">Манчестер Сити</span>
+								</div>
+								<div class="t_center">
+									<span class="t_vs">21:30</span>
+									<span class="t_time">22 марта</span>
+								</div>
+								<div class="t_right">
+									<div><img src="#" alt="Реал Мадрид" class="league_img"></div>
+									<span class="league_title">Челси</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="league_block">
+						<a href="#" class="la align_center">
+							<div class="t_match">
+								<div class="t_left">
+									<div><img src="#" alt="Барселона" class="league_img"></div>
+									<span class="league_title">Реал Мадрид</span>
+								</div>
+								<div class="t_center">
+									<span class="t_vs">22:00</span>
+									<span class="t_time">22 марта</span>
+								</div>
+								<div class="t_right">
+									<div><img src="#" alt="Реал Мадрид" class="league_img"></div>
+									<span class="league_title">Манчестер Сити</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- HIDDEN END -->
+			<div class="index_col">
+				<div class="index_lcol">
+
+					<section class="time_section">
+						<h1 class="align_center"><img src="public/img/clock.png" alt="Live" class="title_img">Ближайшие
+							матчи</h1>
+						<div class="live">
+
+
+
+							<div class="live_block2">
+								<a href="/match/640120" class="match_a align_center">
+									<div class="right">
+										<div class="left_team align_center team_m">
+											<span class="team_title team_title_left">Того</span>
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1534.png" alt="Того"
+													class="team_logo logo_left"></div>
+										</div>
+										<div class="vs align_center">17:00</div>
+										<div class="right_team align_center team_m">
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1510.png" alt="[object Object]"
+													class="team_logo logo_right"></div>
+											<span class="team_title team_title_right">Судан</span>
+										</div>
+									</div>
+								</a>
+							</div>
+
+
+
+							<div class="live_block2">
+								<a href="/match/634734" class="match_a align_center">
+									<div class="right">
+										<div class="left_team align_center team_m">
+											<span class="team_title team_title_left">ОАЭ</span>
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1563.png" alt="ОАЭ"
+													class="team_logo logo_left"></div>
+										</div>
+										<div class="vs align_center">17:20</div>
+										<div class="right_team align_center team_m">
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1568.png" alt="[object Object]"
+													class="team_logo logo_right"></div>
+											<span class="team_title team_title_right">Узбекистан</span>
+										</div>
+									</div>
+								</a>
+							</div>
+
+
+
+							<div class="live_block2">
+								<a href="/match/640109" class="match_a align_center">
+									<div class="right">
+										<div class="left_team align_center team_m">
+											<span class="team_title team_title_left">Гана</span>
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1504.png" alt="Гана"
+													class="team_logo logo_left"></div>
+										</div>
+										<div class="vs align_center">18:30</div>
+										<div class="right_team align_center team_m">
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1569.png" alt="[object Object]"
+													class="team_logo logo_right"></div>
+											<span class="team_title team_title_right">Катар</span>
+										</div>
+									</div>
+								</a>
+							</div>
+
+
+
+							<div class="live_block2">
+								<a href="/match/640119" class="match_a align_center">
+									<div class="right">
+										<div class="left_team align_center team_m">
+											<span class="team_title team_title_left">Мадагаскар</span>
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1490.png" alt="Мадагаскар"
+													class="team_logo logo_left"></div>
+										</div>
+										<div class="vs align_center">21:00</div>
+										<div class="right_team align_center team_m">
+											<div class="circle_team align_center"><img
+													src="http://liveball9.ml/public/img/teams/1502.png" alt="[object Object]"
+													class="team_logo logo_right"></div>
+											<span class="team_title team_title_right">Буркина-Фасо</span>
+										</div>
+									</div>
+								</a>
+							</div>
+
+
+
+							<a href="/matches/2020-10-12" class="show_btn btn_a">Показать все</a>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<section class="time_section">
+				<h1 class="align_center"><img src="//liveball.ru/public/img/field.png" alt="Live" class="title_img">Трансляции
+					футбола онлайн</h1>
+				<div class="index_description">Давно искали где посмотреть матч любимой команды, но везде попадаются
+					нерабочие или тормозящие трансляции? На нашем сайте вы сможете сделать это с комфортом. Вам не нужно
+					нервничать, когда показ матча завис в самый неподходящий момент. Мы предлагаем вам: <br>
+
+					<ul>
+						<li>Просмотр футбола <b>совершенно бесплатно!</b> Вам не нужно платить деньги за трансляции
+							любимой игры.</li>
+						<li>Показ всех <b>Топ 5 Лиг</b> (испанская Примера, английская Премьер Лига, итальянская Серия
+							А, немецкая Бундеслига и французская Лига 1), а также Кубок Германии + конечно же
+							<b>российская Премьер Лига.</b> А также важнейших европейских турниров: <b>Лига Чемпионов,
+								Лига Европы, Чемпионат Мира, ЕВРО и Лига Наций.</b></li>
+						<li><b>Отличное качество</b> просмотра! Как любители футбола, мы понимаем, насколько важна
+							каждая секунда матча. При создании этого сайта, нашей главной целью было обеспечить
+							качественный просмотр футбола.</li>
+					</ul>
+
+					Мы открыты для ваших предложений и замечаний. Сделаем просмотр футбола лучше вместе! <b>LiveBall –
+						Мы там, где футбол</b>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script src="public/js/jquery-3.4.1.slim.min.js"></script>
+	<script>
+		var hide = document.getElementById('p-caption-hide');
+		var hidden = document.getElementById('area');
+		var show = document.getElementById('p-caption-display');
+		if (hide) {
+			hide.onclick = function () {
+				hidden.style.display = "none";
+				hide.style.display = "none";
+				show.style.display = "block";
+			};
+		}
+		if (show) {
+			show.onclick = function () {
+				hidden.style.display = "flex";
+				hide.style.display = "block";
+				show.style.display = "none";
+			};
+		}
+
+
+	</script>
+	<a href="https:http://t.me/joinchat/AAAAAFlFi0Glkw6nik3lwQ" class="tg" id="tg_block">
+		<img src="public/img/tg.svg" alt="Telegram">
+		<div class="tg_info">
+			<h4 class="full">Не пропускай трансляции</h4>
+			<p class="tg_desc">Ссылки на трансляции, новости футбола и многое другое в нашем Telegram канале</p>
+		</div>
+		<button class="tg_close" id="tg_close">
+			<svg xmlns="http:http://www.w3.org/2000/svg" xmlns:xlink="http:http://www.w3.org/1999/xlink" version="1.1"
+				viewBox="0 0 21.9 21.9" enable-background="new 0 0 21.9 21.9">
+				<path
+					d="M14.1,11.3c-0.2-0.2-0.2-0.5,0-0.7l7.5-7.5c0.2-0.2,0.3-0.5,0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4C20,0.1,19.7,0,19.5,0  c-0.3,0-0.5,0.1-0.7,0.3l-7.5,7.5c-0.2,0.2-0.5,0.2-0.7,0L3.1,0.3C2.9,0.1,2.6,0,2.4,0S1.9,0.1,1.7,0.3L0.3,1.7C0.1,1.9,0,2.2,0,2.4  s0.1,0.5,0.3,0.7l7.5,7.5c0.2,0.2,0.2,0.5,0,0.7l-7.5,7.5C0.1,19,0,19.3,0,19.5s0.1,0.5,0.3,0.7l1.4,1.4c0.2,0.2,0.5,0.3,0.7,0.3  s0.5-0.1,0.7-0.3l7.5-7.5c0.2-0.2,0.5-0.2,0.7,0l7.5,7.5c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.4-1.4c0.2-0.2,0.3-0.5,0.3-0.7  s-0.1-0.5-0.3-0.7L14.1,11.3z">
+				</path>
+			</svg>
+		</button>
+	</a>
+	<script src="public/js/theme_switcher.js"></script>
+	<script>
+		function getcookie(a) { var b = new RegExp(a + '=([^;]){1,}'); var c = b.exec(document.cookie); if (c) c = c[0].split('='); else return false; return c[1] ? c[1] : false; }
+		var check = getcookie("telega");
+		var $tgBlock = $('#tg_block');
+		if (check == "close") {
+			$tgBlock.hide(0);
+		} else {
+			$('.tg_close').click(function (e) {
+				e.stopPropagation()
+				e.preventDefault()
+				$tgBlock.hide(200);
+				document.cookie = "telega=close; path=/";
+			})
+			$(function () {
+				if (window.innerWidth > 850) {
+					setTimeout(function () {
+						$tgBlock.css('display', 'flex');
+					}, 1000)
+				}
+			})
+		}
+	</script>
+	<a href="https:http://t.me/joinchat/AAAAAFlFi0Glkw6nik3lwQ"><img class="tg_img" src="public/img/tg.svg"
+			alt="Telegram"></a>
+	<footer>
+		<div class="top_footer align_center">
+			<div class="logo_g"><img src="public/img/new_logo.png" alt="Logo" class="logo_green"></div>
+			<div class="link">
+				<a href="/about" class="foot_a">О нас</a>
+				<a href="/dmca" class="foot_a">Правообладателям</a>
+				<a href="/ads" class="foot_a">Реклама на сайте</a>
+			</div>
+		</div>
+		<div class="bot_footer">© LiveBall – Мы там, где футбол</div>
+	</footer>
+
 </body>
 
 </html>
