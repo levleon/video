@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="//liveball8.ga/player.js"></script>
+		<title>Тест</title>
+	</head>
+	<body>
+		
+		 <script>
+			 window.player = new Playerjs({
+				id: "player",
+				file: `http://s3.streamfb.online/hls/4ea8ff4d3ecbf9ede04ae594cd2c7d4b/index.m3u8`
+			});
+		 </script>
+		<main class="main_div">
+			<div class="container">
+				<div class="player_block" id="player_block">
+					<div id="player"></div>
+				</div>	
+			</div>
+			<script src="/public/js/jquery-3.4.1.slim.min.js"></script>
+		</main>
+	</body>
+</html>
